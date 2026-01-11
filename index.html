@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Movie List</title>
+    <title>My Movie List v0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,23 +22,49 @@
 
     <!-- FORM -->
     <div class="container">
-      <form id="movieForm" class="hidden">
-        <input type="text" id="title" placeholder="Movie title" required />
-        <!-- AUTOCOMPLETE RESULTS -->
-        <div id="suggestions" class="suggestions hidden"></div>
-        <input
-          type="number"
-          id="rating"
-          placeholder="Rating (1-5)"
-          min="1"
-          max="5"
-        />
-        <textarea id="review" placeholder="Your review (optional)"></textarea>
+      <form id="movieForm" class="movie-form hidden">
+        <div class="form-header">
+          <h3>➕ Add New Movie</h3>
+        </div>
 
-        <button type="submit">Save Movie</button>
+        <div class="field">
+          <label>Movie Title</label>
+          <input type="text" id="title" placeholder="Movie title..." required />
+          <div id="suggestions" class="suggestions hidden"></div>
+        </div>
+
+        <div class="field">
+          <label>Rating</label>
+          <div class="rating-input" id="ratingInput">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Review</label>
+          <textarea id="review" placeholder="Short review..."></textarea>
+        </div>
+
+        <button type="submit" class="save-btn">Save Movie</button>
       </form>
+    </div>
 
-      <div id="movieList"></div>
+    <!-- MOVIE LIST -->
+    <div id="movieList"></div>
+
+    <!-- POSTER MODAL (future use) -->
+    <div id="posterModal" class="hidden">
+      <div class="modal-content">
+        <span id="closeModal">×</span>
+        <img id="modalPoster" />
+        <h3 id="modalTitle"></h3>
+        <div id="modalRating"></div>
+        <p id="modalReview"></p>
+      </div>
     </div>
 
     <script src="script.js"></script>

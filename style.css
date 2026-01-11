@@ -151,7 +151,7 @@ button:hover {
    UTIL
 ===================== */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* SEARCH INPUT */
@@ -388,4 +388,56 @@ button:hover {
 
 .suggestion-item:hover {
   background: rgba(56,189,248,0.15);
+}
+
+/* FORM */
+.movie-form {
+  background: rgba(30,41,59,0.75);
+  padding: 18px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr; /* Ubah jadi single column */
+  gap: 14px;
+  margin-bottom: 16px;
+  max-width: 600px;
+  margin: 0 auto 16px auto;
+}
+
+/* FIELD */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Rating input bintang */
+.rating-input {
+  display: flex;
+  gap: 6px;
+}
+
+/* Save button full width */
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}
+
+/* Textarea lebih nyaman */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
 }
