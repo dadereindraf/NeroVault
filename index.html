@@ -24,6 +24,8 @@
     <div class="container">
       <form id="movieForm" class="hidden">
         <input type="text" id="title" placeholder="Movie title" required />
+        <!-- AUTOCOMPLETE RESULTS -->
+        <div id="suggestions" class="suggestions hidden"></div>
         <input
           type="number"
           id="rating"
@@ -32,8 +34,6 @@
           max="5"
         />
         <textarea id="review" placeholder="Your review (optional)"></textarea>
-
-        <input type="file" id="poster" accept="image/*" />
 
         <button type="submit">Save Movie</button>
       </form>
