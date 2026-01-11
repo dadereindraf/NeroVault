@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Movie List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="logo">🎬 My Movie List</div>
+      <div class="nav-buttons">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search movie..." />
+          <button id="clearSearchBtn">✕</button>
+        </div>
+        <button id="toggleFormBtn">➕ Add Movie</button>
+        <button id="editModeBtn">✏ Edit Mode</button>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="container">
+      <form id="movieForm" class="hidden">
+        <input type="text" id="title" placeholder="Movie title" required />
+        <input
+          type="number"
+          id="rating"
+          placeholder="Rating (1-5)"
+          min="1"
+          max="5"
+        />
+        <textarea id="review" placeholder="Your review (optional)"></textarea>
+
+        <input type="file" id="poster" accept="image/*" />
+
+        <button type="submit">Save Movie</button>
+      </form>
+
+      <div id="movieList"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
