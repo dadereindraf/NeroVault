@@ -15,3 +15,4 @@ Tech stack:
 - JavaScript
 
 Author: @dadereindraf
+For personal only
